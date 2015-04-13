@@ -1,43 +1,4 @@
-builds/api/30
-builds
-builds/api/30
-builds
-http://es.int.spark.test.bglcorp.com.au:9200/es/builds/api/30
-builds/api/30
-builds
-http://es.int.spark.test.bglcorp.com.au:9200/es/builds/api/30
-No handler found for uri [/es/builds/api/30] and method [POST]
-builds/api/30
-builds
-http://es.int.spark.test.bglcorp.com.au:9200/builds/api/30
-{"error":"MapperParsingException[failed to parse]; nested: ElasticsearchParseException[Failed to derive xcontent from (offset=0, length=55): [98, 117, 105, 108, 100, 110, 111, 61, 51, 48, 38, 101, 110, 118, 61, 115, 116, 97, 103, 105, 110, 103, 38, 68, 97, 116, 101, 84, 105, 109, 101, 61, 50, 48, 49, 53, 45, 48, 52, 45, 48, 57, 84, 49, 48, 37, 51, 65, 50, 48, 37, 51, 65, 49, 48]]; ","status":400}
-builds/api/30
-builds
-http://es.int.spark.test.bglcorp.com.au:9200/builds/api/30
-{u'buildno': u'30', u'env': u'staging', u'DateTime': u'2015-04-09T10:20:10'}
-{"error":"MapperParsingException[failed to parse]; nested: ElasticsearchParseException[Failed to derive xcontent from (offset=0, length=55): [98, 117, 105, 108, 100, 110, 111, 61, 51, 48, 38, 101, 110, 118, 61, 115, 116, 97, 103, 105, 110, 103, 38, 68, 97, 116, 101, 84, 105, 109, 101, 61, 50, 48, 49, 53, 45, 48, 52, 45, 48, 57, 84, 49, 48, 37, 51, 65, 50, 48, 37, 51, 65, 49, 48]]; ","status":400}
-builds/api/30
-builds
-http://es.int.spark.test.bglcorp.com.au:9200/builds/api/30
-{"DateTime": "2015-04-09T10:20:10", "buildno": "30", "env": "staging"}
-{"_index":"builds","_type":"api","_id":"30","_version":1,"created":true}
-builds/api/30
-builds
-http://es.int.spark.test.bglcorp.com.au:9200/builds/api/30
-{"_index":"builds","_type":"api","_id":"30","_version":1,"found":true,"_source":{"DateTime": "2015-04-09T10:20:10", "buildno": "30", "env": "staging"}}
-index
-index
-trace
-trace
-builds
-builds
-http://es.int.spark.test.bglcorp.com.au:9200/builds
-{"builds":{"mappings":{"api":{"properties":{"DateTime":{"type":"date","format":"dateOptionalTime"},"buildno":{"type":"string"},"env":{"type":"string"}}}},"settings":{"index":{"creation_date":"1428458427936","uuid":"KPlV9FtuQh68wKGkP5PhkA","number_of_replicas":"1","number_of_shards":"5","version":{"created":"1040199"}}}}}
-builds/api
-builds
-http://es.int.spark.test.bglcorp.com.au:9200/builds/api
-{"error":"ElasticsearchIllegalArgumentException[No feature for name [api]]","status":400}
-builds/api/1
-builds
-http://es.int.spark.test.bglcorp.com.au:9200/builds/api/1
-{"_index":"builds","_type":"api","_id":"1","_version":1,"found":true,"_source":{ "env": "staging", "buildno": "12", "DateTime": "2015-04-08T10:10:10" }}
+hacker/api/30
+hacker
+hacker/api/30
+hacker

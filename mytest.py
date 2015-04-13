@@ -5,7 +5,7 @@ from functools import wraps
 from datetime import datetime
 from werkzeug.routing import BaseConverter
 #from elasticsearch import Elasticsearch
-es_url = "http://es.int.spark.test.bglcorp.com.au:9200"
+es_url = "http://es.int.test.com.au:9200"
 
 import logging, requests
 app = Flask(__name__)

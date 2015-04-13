@@ -8,7 +8,7 @@ from functools import wraps
 from datetime import datetime
 from werkzeug.routing import BaseConverter
 #from elasticsearch import Elasticsearch
-es_url = "http://es.int.spark.test.bglcorp.com.au:9200"
+es_url = "http://es.int.test.com.au:9200"
 
 import logging, requests
 app = Flask(__name__)
@@ -23,6 +23,13 @@ app.url_map.converters['regex'] = RegexConverter
 file_handler = logging.FileHandler('app.log')
 app.logger.addHandler(file_handler)
 app.logger.setLevel(logging.INFO)
+
+
+def FactoryMessage(msg):
+	data = { 'Message': msg }
+        resp = jsonify(data)
+        resp.status_code = 200
+	return resp
 
 
 @app.route("/es/<regex('.*'):param>", methods = ['GET','PUT','POST'])
@@ -45,15 +52,9 @@ def es_entry(param):
 				return r.content
 			
 			elif (path[-2] == '_mapping') or (path[-2] == '_mappings'):
-				data = { 'Message':'Mappings not allowed!!!!!!' }
-	                        resp = jsonify(data)
-	                        resp.status_code = 200
-        	                return resp
+        	                return FactoryMessage("Mappings not allowed!!!!!!")
 			else:
-				data = { 'Message':'Index not allowed!!!!!!' }
-				resp = jsonify(data)
-				resp.status_code = 200
-				return resp
+				return FactoryMessage("Index not allowed!!!!!!")
 	
 	if request.method == 'GET':
                         app.logger.info(path[0])
@@ -65,10 +66,7 @@ def es_entry(param):
                                 app.logger.info(r.content)
                                 return r.content
 			else:
-				data = { 'Message':'Index not allowed!!!!!!' }
-                                resp = jsonify(data)
-                                resp.status_code = 200
-                                return resp
+                                return FactoryMessage("Index not allowed!!!!!!")
 		
 
 		
